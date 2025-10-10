@@ -14,17 +14,17 @@ export function HomeSection() {
         Top-Notch Technology Service Provider
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start px-4 lg:px-10 py-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start px-4 lg:px-10 py-0 ">
         {/* ================= LEFT COLUMN ================= */}
         <div className="flex flex-col gap-8">
           {/* Top Section (Background Image Card) */}
-          <div className="relative w-full h-[30vh] overflow-hidden rounded-lg">
+          <div className="relative w-full min-h-[35vh] overflow-hidden rounded-lg lg:min-h-[25vh]">
             <Image
               src="/Scalable_IT_left-min_c8po5r.png"
               alt="Website and App Solutions"
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              // sizes="(max-width: 768px) 100vw, 50vw"
             />
 
             {/* Dark Overlay */}
@@ -32,7 +32,7 @@ export function HomeSection() {
 
             {/* Text Content */}
             <div className="absolute inset-0 flex flex-col justify-center z-10 px-6">
-              <p className="text-2xl lg:text-3xl font-bold mb-3">
+              <p className="text-[19px] lg:text-3xl font-bold mb-3">
                 Website and App Solutions
               </p>
               <p className="text-sm lg:text-base">
@@ -157,7 +157,7 @@ export function HomeSection() {
         {/* ================= RIGHT COLUMN ================= */}
         <div className="flex flex-col gap-8">
           {/* Background Image Card */}
-          <div className="relative w-full h-[30vh] overflow-hidden rounded-lg">
+          <div className="relative w-full min-h-[35vh] overflow-hidden rounded-lg lg:min-h-[25vh]">
             <Image
               src="/Scalable_IT_right-min_cjn5fe.png"
               alt="Website and App Solutions"
@@ -167,7 +167,7 @@ export function HomeSection() {
             />
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="absolute inset-0 flex flex-col justify-center z-10 text-white px-6">
-              <p className="text-2xl lg:text-3xl font-bold mb-3">
+              <p className="text-[19px] lg:text-3xl font-bold mb-3">
                 Flexible, Scalable IT Solution
               </p>
               <p className="text-sm lg:text-base">
@@ -193,7 +193,7 @@ export function HomeSection() {
             <Image
               src="/Elonatech_suupport-min_hrc21l.0c2c2ea76dfbd1cda1f3.png"
               alt="elo"
-              width={500}
+              width={450}
               height={220}
               className="rounded-lg object-contain"
             />
@@ -201,7 +201,7 @@ export function HomeSection() {
             <Image
               src="/One_stop_IT_solution-min_lqmw0y.c47d9758ad9da1d80f35.png"
               alt="roll"
-              width={500}
+              width={450}
               height={220}
               className="rounded-lg object-contain"
             />

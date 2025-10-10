@@ -58,13 +58,17 @@ export function MobileHeader() {
           ></div>
 
           <div className="fixed top-0 right-0 h-screen w-[80%] bg-[#12263d] z-20 pt-20 px-5 text-white overflow-y-auto">
+            <X
+              onClickCapture={toggleMobile}
+              className="absolute top-7 right-4 cursor-pointer"
+            />
             {/* Solutions */}
             <div className="border-b border-gray-600 pb-3">
               <button
                 onClick={() => setSolution(!solution)}
-                className="w-full flex justify-between items-center py-2"
+                className="w-full flex gap-1 items-center py-2"
               >
-                <span className="text-lg">Solutions</span>
+                <span className="text-lg hover:text-[#dc3545]">Solutions</span>
                 <SquareChevronDown
                   className={`w-5 h-5 transition-transform ${
                     solution ? "rotate-180" : ""
@@ -102,9 +106,9 @@ export function MobileHeader() {
             <div className="border-b border-gray-600 py-3">
               <button
                 onClick={() => setSupport(!support)}
-                className="w-full flex justify-between items-center"
+                className="w-full flex gap-1 items-center"
               >
-                <span className="text-lg">Support</span>
+                <span className="text-lg hover:text-[#dc3545]">Support</span>
                 <SquareChevronDown
                   className={`w-5 h-5 transition-transform ${
                     support ? "rotate-180" : ""
@@ -113,11 +117,11 @@ export function MobileHeader() {
               </button>
 
               {support && (
-                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3">
+                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {["Technical", "Network", "Remote"].map((label) => (
                     <li
                       key={label}
-                      className="text-center py-2 hover:bg-gray-200 rounded-md cursor-pointer"
+                      className="text-center py-2 hover:bg-[#dc3545] rounded-md cursor-pointer w-[48%]"
                     >
                       {label}
                     </li>
@@ -129,21 +133,23 @@ export function MobileHeader() {
             <div className="border-b border-gray-600 py-3">
               <button
                 onClick={() => setService(!service)}
-                className="w-full flex justify-between items-center"
+                className="w-full flex gap-1 items-center"
               >
-                <span className="text-lg">Strategic Services</span>
+                <span className="text-lg hover:text-[#dc3545]">
+                  Strategic Services
+                </span>
                 <SquareChevronDown
                   className={`w-5 h-5 transition-transform ${
-                    support ? "rotate-180" : ""
+                    service ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {service && (
-                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3">
+                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {["Consulting", "Retainership", "Training"].map((label) => (
                     <li
                       key={label}
-                      className="text-center py-2 hover:bg-gray-200 rounded-md cursor-pointer"
+                      className="text-center py-2 hover:bg-[#dc3545]  rounded-md cursor-pointer w-[48%]"
                     >
                       {label}
                     </li>
@@ -155,17 +161,17 @@ export function MobileHeader() {
             <div className="border-b border-gray-600 py-3">
               <button
                 onClick={() => setProduct(!product)}
-                className="w-full flex justify-between items-center"
+                className="w-full flex gap-1 items-center"
               >
-                <span className="text-lg">Products</span>
+                <span className="text-lg hover:text-[#dc3545]">Products</span>
                 <SquareChevronDown
                   className={`w-5 h-5 transition-transform ${
-                    support ? "rotate-180" : ""
+                    product ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {product && (
-                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3">
+                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {[
                     "Shop",
                     "Computers",
@@ -176,7 +182,7 @@ export function MobileHeader() {
                   ].map((label) => (
                     <li
                       key={label}
-                      className="text-center py-2 hover:bg-gray-200 rounded-md cursor-pointer"
+                      className="text-center py-2 rounded-md cursor-pointer w-[58%] hover:bg-[#dc3545]"
                     >
                       {label}
                     </li>
@@ -189,22 +195,22 @@ export function MobileHeader() {
             <div className="border-b border-gray-600 py-3">
               <button
                 onClick={() => setWeAre(!weAre)}
-                className="w-full flex justify-between items-center"
+                className="w-full flex gap-1 items-center"
               >
-                <span className="text-lg">Who we are</span>
+                <span className="text-lg hover:text-[#dc3545]">Who we are</span>
                 <SquareChevronDown
                   className={`w-5 h-5 transition-transform ${
-                    support ? "rotate-180" : ""
+                    weAre ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {weAre && (
-                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3">
+                <ul className="mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {["Company", "Team", "Portfolio", "Blog", "Career"].map(
                     (label) => (
                       <li
                         key={label}
-                        className="text-center py-2 hover:bg-gray-200 rounded-md cursor-pointer"
+                        className="text-center py-2 rounded-md cursor-pointer hover:bg-[#dc3545] w-[48%]"
                       >
                         {label}
                       </li>
@@ -215,7 +221,7 @@ export function MobileHeader() {
             </div>
 
             <div className="border-b border-gray-600 py-3">
-              <span>Who we are</span>
+              <span className="hover:text-[#dc3545]">Get in touch</span>
             </div>
 
             {/* Socials */}
