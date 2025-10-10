@@ -76,6 +76,8 @@ export function DesktopHeader() {
                               key={idx}
                               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuElEQVR4nO3cS0oDQRSF4bOMGLeijg1xHT7mPhYQtxQcxYHBjRinKiYOFCIlDRUIwQz0eLGr+v+gB0GocH86r5ZqCQAAAABKcCRpIulNUqrkWOSZhtHxrlswbAo+RpFnXvME75LOJe2oHs0sF3m2FHUm3ubFm3i1uswzNi/nP7fIi/dUr16ecR6x+Oo9onYpas5tC6fCDwKqkoClIaCJgCYCmghoIqCJgCYCmghoIqCJgCYCmghoIqCJgCYCmghoIqCJgCYCmghoIqCJgCYCmghoIqCJgCYCmghoImBtAVOhBwFVeMDahM35kheuaXvDpt0845MC3OTFm/0UtbrKM44jFt+X9Jk3ozT7KfqqRz/H+5C0lLQX9UQn+Qk23yfuJU0Lfryap5ntWIHOtgScSror+PF6wFMFOVh7Cde8V26Z367CPkS6sFduHPk1pgt75Z4jFueLtKmWgENJj5JmkgZt+SmX/umH/2/M1tZ7+OGcFgKaankJD/JZ2Jx9h9/8nasxprCA8w5djXmNWHzSoasxk6iP/9SBqzEp8gY8oxb8DyOVeuOdlWE+xRctGLa4Wz8BAAAAgGxf3GNlldRIpA0AAAAASUVORK5CYII="
                               alt="placeholder"
+                              width={25}
+                              height={30}
                               className="w-16 h-16 object-contain"
                             />
                           ))}

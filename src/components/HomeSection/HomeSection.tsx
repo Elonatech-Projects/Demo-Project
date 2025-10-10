@@ -37,13 +37,13 @@ export function HomeSection() {
               </p>
               <p className="text-sm lg:text-base">
                 At Elonatech, we build Apps that are not only visually beautiful
-                but also functionally effective.
+                but also functionally.
               </p>
               <p className="text-sm lg:text-base">
                 Our team of web strategists, designers, developers, and project
-                managers work together to help clients meet their business
-                objectives.
+                managers.
               </p>
+              <p>Work together to help clients meet thier business objective</p>
               <button className="p-3.5 bg-blue-600 mt-4 rounded w-fit text-sm lg:text-base">
                 Read More
               </button>
@@ -168,16 +168,19 @@ export function HomeSection() {
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="absolute inset-0 flex flex-col justify-center z-10 text-white px-6">
               <p className="text-2xl lg:text-3xl font-bold mb-3">
-                Website and App Solutions
+                Flexible, Scalable IT Solution
               </p>
               <p className="text-sm lg:text-base">
-                At Elonatech, we build Apps that are not only visually beautiful
-                but also functionally effective.
+                Having the right company behind your IT system is as important
+                as the network
               </p>
               <p className="text-sm lg:text-base">
-                Our team of web strategists, designers, developers, and project
-                managers work together to help clients meet their business
-                objectives.
+                itself. Implementing a well-designed, secured enterprise network
+                and utilizing the
+              </p>
+              <p>
+                right combination of IT solutions will drive your business to
+                the disred level
               </p>
               <button className="p-3.5 bg-blue-600 mt-4 rounded w-fit text-sm lg:text-base">
                 Read More
