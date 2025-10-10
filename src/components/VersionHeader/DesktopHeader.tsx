@@ -16,7 +16,7 @@ export function DesktopHeader() {
 
   return (
     <div className="hidden lg:block text-white shadow-md">
-      <div className=" mx-auto flex justify-between items-center px-6 py-3">
+      <div className="fixed top-0 z-50 w-full bg-[#10243b] mx-auto flex justify-between items-center px-6 py-3">
         <Image
           src="https://elonatech.com.ng/static/media/elonatech.c6083e7d06b4cbab7d90.png"
           alt="Elonatech"

@@ -1,14 +1,3 @@
-// export const images = [
-//   '/Digital_marketers_zreuxb.a3feb2d79566b9e3b288.jpg',
-//   '/IT_consultants_ah07ai.5532ba6aa0d89167c45c.jpg',
-//   '/tech_support_jijajw.09f71dcde3a2fbfe63f9.jpg',
-//   '/web_developers_sbyfha.045843ed3188eb0d2d68.jpg'
-// ];
-
-
-// export interface Slide {
-//   image: string;
-// }
 
 export interface Texts {
   textOne: string;

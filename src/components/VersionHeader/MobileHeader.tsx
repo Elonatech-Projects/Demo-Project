@@ -27,7 +27,7 @@ export function MobileHeader() {
   return (
     <div className="block lg:hidden">
       {/* Header bar */}
-      <div className="flex justify-between items-center py-3 px-3 bg-blue-300 fixed w-full top-0 z-20">
+      <div className="flex justify-between items-center py-3 px-3 bg-[#10243b] fixed w-full top-0 z-20">
         <Image
           src="https://elonatech.com.ng/static/media/elonatech.c6083e7d06b4cbab7d90.png"
           alt="elonatech"

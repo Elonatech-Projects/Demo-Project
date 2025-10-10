@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function HomeSection() {
   return (
-    <section className="bg-white pt-3.5">
+    <section className="bg-white pt-3.5 w-full">
       <h1 className="text-3xl text-black font-bold text-center">
         Why Elonatech
       </h1>
@@ -14,7 +14,7 @@ export function HomeSection() {
         Top-Notch Technology Service Provider
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start px-4 lg:px-10 py-0 ">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-start px-4 lg:px-10 py-0 lg:w-[80%] m-auto">
         {/* ================= LEFT COLUMN ================= */}
         <div className="flex flex-col gap-8">
           {/* Top Section (Background Image Card) */}
