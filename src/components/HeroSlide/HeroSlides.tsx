@@ -22,11 +22,11 @@ export function HeroSlides() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full flex justify-between items-center h-[52vh] lg:h-[80vh] pt-10"
+      className="relative w-full flex justify-between items-center h-[36vh] sm:h-[350px] text-white text-xs lg:h-[50vh] pt-10 xl:h-[610px]"
     >
       {/* Left group: chevron + text */}
       <div className="flex items-center  w-full">
-        <ChevronLeft className="w-24 h-24" />
+        <ChevronLeft className="w-5 h-5 lg:w-10 lg:h-10 2xl:w-24 2xl:h-24" />
 
         <div className="text-white w-full">
           {images[count].words.map((el, i) => (
@@ -43,7 +43,7 @@ export function HeroSlides() {
                 {el.textThree}
               </p>
 
-              <button className="bg-[#dc3545] p-3 rounded-[10px] mt-2.5">
+              <button className="bg-[#dc3545] px-3 rounded-[10px] mt-2.5 h-10 items-center">
                 Know More
               </button>
             </div>
@@ -51,8 +51,20 @@ export function HeroSlides() {
         </div>
       </div>
 
+      <div className="absolute inset-0 bg-black/50"></div>
+
       {/* Right chevron */}
-      <ChevronRight className="w-24 h-24" />
+      <ChevronRight className="w-5 h-5 lg:w-10 lg:h-10 2xl:w-24 2xl:h-24" />
+      <div className="absolute bottom-5 flex justify-center gap-2 mt-6 mx-auto w-full">
+        {images.map((_, i) => (
+          <div
+            key={i}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              i === count ? "bg-[#dc3545] scale-125" : "bg-gray-500"
+            }`}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 }

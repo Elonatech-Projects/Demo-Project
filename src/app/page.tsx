@@ -6,19 +6,31 @@ import { SlideComp } from "@/components/Section/SlideComp";
 
 import { WhatWeDo } from "@/components/Section/WhatWeDo";
 import { WhatWeDoBest } from "@/components/Section/WhatWeDoBest";
+import { Testimonial } from "@/components/HomeSection/Testimonial";
+import { Cards } from "@/components/HomeSection/Cards";
+import { ProfileImage } from "@/components/HomeSection/ProfileImage";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       <HeroSlides />
-      <HomeSection />
 
-      <div className="bg-white pt-16">
+      <div className=" pt-12 w-[97%] sm:w-[90%] lg:w-[95%] xl:w-[1270px] mx-auto">
+        <HomeSection />
         <WhatWeDoBest />
         <WhatWeDo />
         <DoBest />
         <SlideComp />
+      </div>
+
+      <div className="bg-[#11253d] mt-14">
+        <Testimonial />
+      </div>
+
+      <div className="mt-14">
+        <Cards />
+        <ProfileImage />
       </div>
     </div>
   );

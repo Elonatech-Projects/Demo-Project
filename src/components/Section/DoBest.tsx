@@ -7,93 +7,72 @@ export function DoBest() {
   const [popImg, setPopImg] = useState(false);
   const [item, setItem] = useState(false);
   const [itemOne, setItemOne] = useState(false);
+
   return (
-    <div className="pt-5">
-      <div className="w-[93%] grid grid-cols-1 gap-10 lg:grid-cols-3 lg:w-[80%] lg:gap-0 m-auto">
-        {/* item-one */}
+    <div className="mt-3.5 w-full">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+        {/* ================= ITEM ONE ================= */}
         <div
           onMouseEnter={() => setPopImg(true)}
           onMouseLeave={() => setPopImg(false)}
-          className="relative w-full min-h-[] overflow-hidden rounded-lg lg:w-[480px] lg:h-[40vh]"
+          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px] overflow-hidden"
         >
-          {/* Background Image */}
           <Image
-            src="/web_design_dtffrx.4e297f025df2cc4dc1ec.png"
+            src="/animation_qzszuz.716c7c755fadc520d591.png"
             alt="web"
-            width={200}
-            height={100}
-            className="object-cover object-center w-full h-full"
+            width={800}
+            height={600}
+            className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
 
-          {/* Bottom logo — positioned relative to parent */}
-          <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] w-[200px] flex flex-col justify-center items-center font-bold">
-            <p>WEB DESIGN &</p>
-            <p>DEVELOPMENT</p>
+          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center">
+            <p>ANIMATION & VIDEO</p>
+            <p>GRAPHIC</p>
             <Image
               alt="logo"
               height={90}
               width={60}
-              src="/website_svappk.png"
+              src="https://res.cloudinary.com/elonatech/image/upload/v1709632430/homePage/What%20we%20do/icons/network_bcyqi7.png"
             />
           </div>
 
-          {/* Hover overlay */}
           {popImg && (
-            <div className="absolute z-30 inset-0 flex flex-col items-center justify-center bg-[#295a9a] opacity-90 text-white transition-all duration-300">
-              <h1 className="text-lg font-semibold mb-2">
-                WEB DESIGN & DEVELOPMENT
-              </h1>
-
-              <div className="mb-3">
-                <Image
-                  alt="logo"
-                  height={90}
-                  width={60}
-                  src="/website_svappk.png"
-                />
-              </div>
-
-              <div className="hidden lg:block">
-                <p>
-                  At Elonatech, we build websites that are not only visually
-                </p>
-                <p>
-                  beautiful but also functionally effective — our team of web
-                </p>
-                <p className="text-center">strategists...</p>
-              </div>
-              <div className="block lg:hidden">
-                <p>At Elonatech, we build websites that are not only</p>
-                <p>visually beautiful but also functionally effective —</p>
-                <p className="text-center"> our team of web strategists...</p>
-              </div>
-              <div className="mt-4">
-                <button className="bg-white text-[#295a9a] px-4 py-2 rounded-md font-medium hover:bg-gray-100">
-                  See More
-                </button>
-              </div>
+            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a] bg-opacity-95 text-white transition-all duration-300">
+              <h1 className="text-[18px] font-semibold">ANIMATION & VIDEO</h1>
+              <h1 className="text-[18px] font-semibold mb-2">GRAPHIC</h1>
+              <Image
+                alt="logo"
+                height={90}
+                width={60}
+                src="https://res.cloudinary.com/elonatech/image/upload/v1709632430/homePage/What%20we%20do/icons/network_bcyqi7.png"
+              />
+              <p className="mt-3 text-center w-[300px] text-[14px]">
+                Animations have the power to convey complex concepts, evoke
+                emotions, and leave a lasting impression on your audience.
+              </p>
+              <button className="mt-4 bg-white text-[#295a9a] px-[16px] py-[8px] rounded-md font-medium">
+                See More
+              </button>
             </div>
           )}
         </div>
-        {/* item-two */}
+
+        {/* ================= ITEM TWO ================= */}
         <div
           onMouseEnter={() => setItem(true)}
           onMouseLeave={() => setItem(false)}
-          className="relative w-full h-[45vh] overflow-hidden rounded-lg lg:w-[480px] lg:h-[40vh]"
+          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px] overflow-hidden"
         >
-          {/* Background Image */}
           <Image
-            src="/digital_marketing_g63rfx.c1a2cfa8699399d06000.png"
+            src="/live_streaming_rzknw9.0b4319ecc2e35f0a5576.png"
             alt="web"
-            width={200}
-            height={100}
-            className="object-cover object-center w-full h-full"
+            width={800}
+            height={600}
+            className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
-
-          {/* Bottom logo — positioned relative to parent */}
-          <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] w-[200px] flex flex-col justify-center items-center font-bold">
-            <p>DIGITAL MAKETING</p>
-            {/* <p>DEVELOPMENT</p> */}
+          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center">
+            <p>LIVESTREAMING &</p>
+            <p>VIDEOCONFERENCING</p>
             <Image
               alt="logo"
               height={90}
@@ -102,58 +81,44 @@ export function DoBest() {
             />
           </div>
 
-          {/* Hover overlay */}
           {item && (
-            <div className="absolute z-30 inset-0 flex flex-col items-center justify-center bg-[#295a9a] opacity-90 text-white transition-all duration-300">
-              <h1 className="text-lg font-semibold mb-2">DIGITAL MAKETING</h1>
-
-              <div className="mb-3">
-                <Image
-                  alt="logo"
-                  height={90}
-                  width={60}
-                  src="/network_2_hbxvaz.png"
-                />
-              </div>
-
-              <div className="hidden lg:block">
-                <p>With digital marketing, we have successfully changed the</p>
-                <p>way brand and businesses use technology for marketing.</p>
-                <p className="text-center">Digital platforms are...</p>
-              </div>
-              <div className="flex flex-col justify-center items-center lg:hidden">
-                <p></p>
-                <p>With digital marketing, we have successfully </p>
-                <p>changed the way brand and businesses use </p>
-                <p className="text-center">Digital platforms are...</p>
-              </div>
-              <div className="mt-4">
-                <button className="bg-white text-[#295a9a] px-4 py-2 rounded-md font-medium hover:bg-gray-100">
-                  See More
-                </button>
-              </div>
+            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a] bg-opacity-95 text-white transition-all duration-300">
+              <h1 className="text-[18px] font-semibold">LIVESTREAMING &</h1>
+              <h1 className="text-[18px] font-semibold mb-2">
+                VIDEOCONFERENCING
+              </h1>
+              <Image
+                alt="logo"
+                height={90}
+                width={60}
+                src="/network_2_hbxvaz.png"
+              />
+              <p className="mt-3 text-center w-[300px] text-[14px]">
+                As we adjust to the new normal, everyone is moving their social
+                life online — concerts, events, seminars, and talk shows.
+              </p>
+              <button className="mt-4 bg-white text-[#295a9a] px-[16px] py-[8px] rounded-md font-medium">
+                See More
+              </button>
             </div>
           )}
         </div>
-        {/* item-three */}
+
+        {/* ================= ITEM THREE ================= */}
         <div
           onMouseEnter={() => setItemOne(true)}
           onMouseLeave={() => setItemOne(false)}
-          className="relative w-full h-[45vh] overflow-hidden rounded-lg lg:w-[480px] lg:h-[40vh]"
+          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px] overflow-hidden"
         >
-          {/* Background Image */}
           <Image
-            src="/graphics_and_branding_nme5lb.0de92b24591faa917437.png"
+            src="/consulting_ldkbus.ed6f794e06c567ea6818.png"
             alt="web"
-            width={200}
-            height={100}
-            className="object-cover object-center w-full h-full"
+            width={800}
+            height={600}
+            className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
-
-          {/* Bottom logo — positioned relative to parent */}
-          <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] w-[200px] flex flex-col justify-center items-center font-bold">
-            <p>GRAPHIC & BRANDING</p>
-            {/* <p>DEVELOPMENT</p> */}
+          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center">
+            <p>CONSULTING</p>
             <Image
               alt="logo"
               height={90}
@@ -162,42 +127,22 @@ export function DoBest() {
             />
           </div>
 
-          {/* Hover overlay */}
           {itemOne && (
-            <div className="absolute z-30 inset-0 flex flex-col items-center justify-center bg-[#295a9a] opacity-90 text-white transition-all duration-300">
-              <h1 className="text-lg font-semibold mb-2">GRAPHIC & BRANDING</h1>
-
-              <div className="mb-3">
-                <Image
-                  alt="logo"
-                  height={90}
-                  width={60}
-                  src="/graphic_pkt8ib.png"
-                />
-              </div>
-
-              <div className="hidden lg:block">
-                <p>
-                  Brand identity is not limited to a speciffic mark or name,
-                </p>
-                <p className="text-center">
-                  Branding can incorporate many touch points...
-                </p>
-              </div>
-              <div className="flex flex-col justify-center items-center lg:hidden">
-                <p></p>
-                <p>
-                  Brand identity is not limited to a speciffic mark or name.
-                </p>
-                <p className="text-center">
-                  Branding can incorporate many touch points...
-                </p>
-              </div>
-              <div className="mt-4">
-                <button className="bg-white text-[#295a9a] px-4 py-2 rounded-md font-medium hover:bg-gray-100">
-                  See More
-                </button>
-              </div>
+            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a] bg-opacity-95 text-white transition-all duration-300">
+              <h1 className="text-[18px] font-semibold mb-2">CONSULTING</h1>
+              <Image
+                alt="logo"
+                height={90}
+                width={60}
+                src="/graphic_pkt8ib.png"
+              />
+              <p className="mt-3 text-center w-[300px] text-[14px]">
+                We help brands and businesses gain a competitive advantage with
+                12+ years of experience delivering tailored solutions.
+              </p>
+              <button className="mt-4 bg-white text-[#295a9a] px-[16px] py-[8px] rounded-md font-medium">
+                See More
+              </button>
             </div>
           )}
         </div>

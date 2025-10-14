@@ -13,7 +13,8 @@ import {
   X,
 } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 export function MobileHeader() {
   const [mobile, setMobile] = useState(false);
   const [solution, setSolution] = useState(false);
@@ -21,30 +22,49 @@ export function MobileHeader() {
   const [service, setService] = useState(false);
   const [product, setProduct] = useState(false);
   const [weAre, setWeAre] = useState(false);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   function toggleMobile() {
     setMobile((prev) => !prev);
   }
+
   return (
-    <div className="block lg:hidden">
+    <div className="block xl:hidden">
       {/* Header bar */}
-      <div className="flex justify-between items-center py-3 px-3 bg-[#10243b] fixed w-full top-0 z-20">
+      <div
+        className={`flex justify-between items-center py-3 px-3 fixed w-full top-0 z-20 transition-colors duration-300 ${
+          isScrolled ? "bg-[#11253d]" : "bg-transparent"
+        }`}
+      >
         <Image
           src="https://elonatech.com.ng/static/media/elonatech.c6083e7d06b4cbab7d90.png"
           alt="elonatech"
-          width={130}
+          width={110}
           height={50}
           priority
         />
 
         <div className="flex gap-2">
-          <button>
-            <House className="w-5 h-5" />
-          </button>
-          <button>
-            <ShoppingCart className="w-5 h-5" />
-          </button>
           <button onClick={toggleMobile} className="cursor-pointer">
-            {mobile ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobile ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -62,6 +82,7 @@ export function MobileHeader() {
               onClickCapture={toggleMobile}
               className="absolute top-7 right-4 cursor-pointer"
             />
+
             {/* Solutions */}
             <div className="border-b border-gray-600 pb-3">
               <button
@@ -102,6 +123,7 @@ export function MobileHeader() {
                 </div>
               )}
             </div>
+
             {/* Support */}
             <div className="border-b border-gray-600 py-3">
               <button
@@ -129,6 +151,7 @@ export function MobileHeader() {
                 </ul>
               )}
             </div>
+
             {/* services */}
             <div className="border-b border-gray-600 py-3">
               <button
@@ -157,6 +180,7 @@ export function MobileHeader() {
                 </ul>
               )}
             </div>
+
             {/* product */}
             <div className="border-b border-gray-600 py-3">
               <button
@@ -230,6 +254,8 @@ export function MobileHeader() {
               <Facebook className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
               <Instagram className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
               <Twitter className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
+              <House className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
+              <ShoppingCart className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
             </div>
           </div>
         </>
