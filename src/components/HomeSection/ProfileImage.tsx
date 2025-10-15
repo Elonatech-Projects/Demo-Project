@@ -2,36 +2,36 @@ import Image from "next/image";
 
 export function ProfileImage() {
   return (
-    <div className="bg-[#cccccc] text-black min-h-[290px] mt-10 pt-6 relative overflow-hidden">
+   <div className="text-black min-h-[280px] pt-6 overflow-hidden relative mt-3.5 w-[97%] sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[1270px] mx-auto">
       {/* Container */}
-      <div className="relative w-[97%] sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[1270px] mx-auto mt-3.5">
+     <div className="w-[97%] sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[1270px]">
         {/* Text Section */}
-        <div className=" z-10 relative">
-          <h1 className="text-xl font-semibold leading-tight">
+        <div className=" z-10 relative ">
+          <h1 className="text-[14px] font-bold 2xl:text-[16px] leading-tight">
             How about a FREE Consultation on the Best Digital Marketing Strategy
             for
           </h1>
-          <h1 className="text-xl font-semibold leading-tight">
+          <h1 className="text-[14px] font-bold 2xl:text-[16px] leading-tight">
             your Business?
           </h1>
 
-          <p className="mt-3">
+          <p className="mt-3 text-sm ">
             Want to know how to increase your brand visibility, boost audience
             engagement, drive traffic, increase
           </p>
-          <p>
+          <p className="text-sm ">
             social media followers, promote your products and services online,
             and increase sales for your
           </p>
-          <p>
+          <p className="text-sm ">
             business? Elonatech offers tailored advice on how to reach and
             engage your audience better, increase
           </p>
-          <p>
+          <p className="text-sm ">
             conversions, and maximize profit through a bespoke monthly/yearly
             digital marketing plan for your
           </p>
-          <p>business.</p>
+          <p className="text-sm ">business.</p>
 
           <button className="bg-[#b60903] text-white h-9 px-3 mt-5 rounded-[4px]">
             Get Free Consultation
@@ -39,7 +39,7 @@ export function ProfileImage() {
         </div>
 
         {/* Image Section */}
-        <div className="absolute bottom-0 right-0 h-full sm:hidden 2xl:block">
+        <div className="hidden sm:hidden 2xl:block absolute bottom-0 right-0 h-full">
           <Image
             src="/Ceo1.ce4aef99d34db8843883.png"
             alt="CEO"
@@ -50,5 +50,6 @@ export function ProfileImage() {
         </div>
       </div>
     </div>
+
   );
 }

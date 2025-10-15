@@ -10,12 +10,12 @@ export function WhatWeDo() {
 
   return (
     <div className="mt-3.5 w-full">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 gap-4 lg:w-[970px] lg:grid-cols-3 m-auto xl:w-[90%] ">
         {/* ITEM ONE */}
         <div
           onMouseEnter={() => setPopImg(true)}
           onMouseLeave={() => setPopImg(false)}
-          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px] overflow-hidden"
+          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px]"
         >
           <Image
             src="/networking_sjpi7m.2c723bfe31cb0a9537af.png"
@@ -26,8 +26,8 @@ export function WhatWeDo() {
           />
 
           <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] w-[200px] flex flex-col justify-center items-center font-bold md:text-center">
-            <p>NETWORK ENGINEERING/</p>
-            <p>ADMINISTRATION</p>
+            <p className="text-xs sm:text-sm">NETWORK ENGINEERING/</p>
+            <p className="text-xs sm:text-sm">ADMINISTRATION</p>
             <Image
               alt="logo"
               height={90}
@@ -85,7 +85,7 @@ export function WhatWeDo() {
           />
 
           <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] w-[230px] flex flex-col justify-center items-center font-bold">
-            <p>COMPUTER ENGINEERING</p>
+            <p className="text-xs sm:text-sm">COMPUTER ENGINEERING</p>
             <Image
               alt="logo"
               height={90}
@@ -142,8 +142,8 @@ export function WhatWeDo() {
           />
 
           <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] w-[200px] flex flex-col justify-center items-center font-bold">
-            <p>ACCESS CONTROL &</p>
-            <p>SURVEILLANCE</p>
+            <p className="text-xs sm:text-sm">ACCESS CONTROL &</p>
+            <p className="text-xs sm:text-sm">SURVEILLANCE</p>
             <Image
               alt="logo"
               height={90}
@@ -153,7 +153,7 @@ export function WhatWeDo() {
           </div>
 
           {itemOne && (
-            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300">
+            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 px-2.5">
               <h1 className="text-lg font-semibold mb-1">ACCESS CONTROL &</h1>
               <h1 className="text-lg font-semibold mb-3">SURVEILLANCE</h1>
 

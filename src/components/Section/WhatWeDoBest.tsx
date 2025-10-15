@@ -9,17 +9,17 @@ export function WhatWeDoBest() {
   const [itemOne, setItemOne] = useState(false);
 
   return (
-    <div className="pt-10 w-full">
+    <div className=" pt-10 w-full">
       <h1 className="text-center text-2xl text-black font-bold mb-6">
         What We Do Best
       </h1>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 gap-4 lg:w-[970px] lg:grid-cols-3 m-auto xl:w-[90%]">
         {/* ITEM ONE */}
         <div
           onMouseEnter={() => setPopImg(true)}
           onMouseLeave={() => setPopImg(false)}
-          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px] overflow-hidden"
+          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px]"
         >
           <Image
             src="/web_design_dtffrx.4e297f025df2cc4dc1ec.png"
@@ -29,9 +29,9 @@ export function WhatWeDoBest() {
             className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
 
-          <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] flex flex-col justify-center items-center w-[140px] min-h-[120px]">
-            <p className="whitespace-nowrap text-xs sm:text-sm">WEB DESIGN &</p>
-            <p className="whitespace-nowrap text-xs sm:text-sm">DEVELOPMENT</p>
+          <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] flex flex-col justify-center items-center w-[150px] h-[120px]">
+            <p className="whitespace-nowrap font-bold text-xs sm:text-sm">WEB DESIGN &</p>
+            <p className="whitespace-nowrap text-xs font-bold sm:text-sm">DEVELOPMENT</p>
             <Image
               alt="logo"
               height={90}
@@ -42,7 +42,7 @@ export function WhatWeDoBest() {
           </div>
 
           {popImg && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 text-xs">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 text-xs px-2.5">
               <h1 className="text-[15px] font-semibold mb-2 text-center">
                 WEB DESIGN & DEVELOPMENT
               </h1>
@@ -57,15 +57,15 @@ export function WhatWeDoBest() {
               </div>
 
               <div className="hidden lg:block text-xs font-bold">
-                <p>
+                <p className="text-center">
                   At Elonatech, we build websites that are not only visually
                 </p>
-                <p>
+                <p className="text-center">
                   beautiful but also functionally effective — our team of web
                 </p>
                 <p className="text-center">strategists...</p>
               </div>
-              <div className="block lg:hidden">
+              <div className="text-center font-bold text-xs block lg:hidden">
                 <p>At Elonatech, we build websites that are not only</p>
                 <p>visually beautiful but also functionally effective —</p>
                 <p className="text-center">our team of web strategists...</p>
@@ -95,7 +95,7 @@ export function WhatWeDoBest() {
           />
 
           <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] flex flex-col justify-center items-center font-bold">
-            <p>DIGITAL MARKETING</p>
+            <p className="text-xs sm:text-sm">DIGITAL MARKETING</p>
             <Image
               alt="logo"
               height={90}
@@ -105,7 +105,7 @@ export function WhatWeDoBest() {
           </div>
 
           {item && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 px-2.5">
               <h1 className="text-lg font-semibold mb-2">DIGITAL MARKETING</h1>
 
               <div className="mb-3">
@@ -152,7 +152,7 @@ export function WhatWeDoBest() {
           />
 
           <div className="absolute bottom-0 left-0 p-2 bg-[#295a9a] flex flex-col justify-center items-center font-bold">
-            <p>GRAPHIC & BRANDING</p>
+            <p className="text-xs sm:text-sm">GRAPHIC & BRANDING</p>
             <Image
               alt="logo"
               height={90}
@@ -162,7 +162,7 @@ export function WhatWeDoBest() {
           </div>
 
           {itemOne && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 px-2.5">
               <h1 className="text-lg font-semibold mb-2">GRAPHIC & BRANDING</h1>
 
               <div className="mb-3">
@@ -174,7 +174,7 @@ export function WhatWeDoBest() {
                 />
               </div>
 
-              <div className="hidden lg:block text-xs font-bold">
+              <div className="hidden lg:block text-xs text-center font-bold">
                 <p>Brand identity is not limited to a specific mark or name,</p>
                 <p className="text-center">
                   Branding can incorporate many touch points...

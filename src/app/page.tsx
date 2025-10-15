@@ -12,11 +12,11 @@ import { ProfileImage } from "@/components/HomeSection/ProfileImage";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       <Header />
       <HeroSlides />
 
-      <div className=" pt-12 w-[97%] sm:w-[90%] lg:w-[95%] xl:w-[1270px] mx-auto">
+      <div className=" pt-12 w-[95%] sm:w-[90%] lg:w-[1024px] xl:w-[1270px] mx-auto">
         <HomeSection />
         <WhatWeDoBest />
         <WhatWeDo />
@@ -30,7 +30,10 @@ export default function Home() {
 
       <div className="mt-14">
         <Cards />
-        <ProfileImage />
+      </div>
+
+      <div className="bg-[#cccccc] mt-14 px-4">
+          <ProfileImage />
       </div>
     </div>
   );

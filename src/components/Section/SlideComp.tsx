@@ -83,7 +83,7 @@ export function SlideComp() {
   };
 
   return (
-    <div className="relative w-full m-auto overflow-hidden rounded-lg mt-24">
+    <div className="relative w-full m-auto overflow-hidden rounded-lg mt-24 lg:w-[970px] xl:w-[90%]">
       <h1 className="text-center text-black text-2xl font-bold lg:text-3xl">
         Some of our clients
       </h1>

@@ -10,12 +10,12 @@ export function DoBest() {
 
   return (
     <div className="mt-3.5 w-full">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 gap-4 lg:w-[970px] lg:grid-cols-3 m-auto xl:w-[90%]">
         {/* ================= ITEM ONE ================= */}
         <div
           onMouseEnter={() => setPopImg(true)}
           onMouseLeave={() => setPopImg(false)}
-          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px] overflow-hidden"
+          className="relative w-full h-[320px] sm:h-[360px] md:h-[340px]"
         >
           <Image
             src="/animation_qzszuz.716c7c755fadc520d591.png"
@@ -25,9 +25,9 @@ export function DoBest() {
             className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
 
-          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center">
-            <p>ANIMATION & VIDEO</p>
-            <p>GRAPHIC</p>
+          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center p-3">
+            <p className="text-xs sm:text-sm">ANIMATION & VIDEO</p>
+            <p className="text-xs sm:text-sm">GRAPHIC</p>
             <Image
               alt="logo"
               height={90}
@@ -70,9 +70,9 @@ export function DoBest() {
             height={600}
             className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
-          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center">
-            <p>LIVESTREAMING &</p>
-            <p>VIDEOCONFERENCING</p>
+          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center p-3">
+            <p className="text-xs sm:text-sm">LIVESTREAMING &</p>
+            <p className="text-xs sm:text-sm">VIDEOCONFERENCING</p>
             <Image
               alt="logo"
               height={90}
@@ -117,8 +117,8 @@ export function DoBest() {
             height={600}
             className="object-cover object-center w-full h-full min-w-full min-h-full max-w-full max-h-full"
           />
-          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center">
-            <p>CONSULTING</p>
+          <div className="absolute bottom-0 left-0 bg-[#295a9a] text-white font-bold flex flex-col items-center justify-center p-3">
+            <p className="text-xs sm:text-sm">CONSULTING</p>
             <Image
               alt="logo"
               height={90}

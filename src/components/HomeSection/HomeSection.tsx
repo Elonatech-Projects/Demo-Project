@@ -6,7 +6,7 @@ import { Gem, Headphones, Laptop, Printer } from "lucide-react";
 
 export function HomeSection() {
   return (
-    <div className="w-full">
+    <div className="w-full py-3.5">
       <h1 className="text-center text-sm text-black font-bold sm:text-2xl">
         Why Elonatech
       </h1>
@@ -17,27 +17,28 @@ export function HomeSection() {
       <div
         className="
           flex flex-col gap-[14px] 
-          lg:flex-row lg:justify-between 
+          lg:flex-row lg:w-[970px] justify-between 
           items-center lg:items-start
           mx-auto
+          xl:w-[90%]
           mt-2.5
         "
       >
         {/* ================= LEFT CARD ================= */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat text-white h-[230px] p-5 rounded-md lg:h-[260px] 2xl:h-[220px]"
+          className="relative bg-cover bg-center bg-no-repeat text-white  h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[210px] "
           style={{
             backgroundImage: "url('/Scalable_IT_left-min_c8po5r.png')",
           }}
         >
-          <p className="text-[16px] sm:text-[20px] lg:text-[22px] font-bold mb-3">
+          <p className="text-[16px] sm:text-[20px] font-bold mb-3">
             Website and App Solutions
           </p>
-          <p className="text-xs sm:text-sm lg:text-[15px] leading-snug">
+          <p className="text-xs sm:text-[13px]">
             At Elonatech, we build Apps that are not only visually beautiful but
             also functionally.
           </p>
-          <p className="text-xs sm:text-sm lg:text-[15px] leading-snug">
+          <p className="text-xs sm:text-[13px]">
             Our team of web strategists, designers, developers, and project
             managers work together to help clients meet their business
             objectives.
@@ -50,7 +51,7 @@ export function HomeSection() {
 
         {/* ================= RIGHT CARD ================= */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat text-white h-[230px] p-5 rounded-md lg:h-[260px] 2xl:h-[220px]"
+          className="relative bg-cover bg-center bg-no-repeat  text-white h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[210px] "
           style={{
             backgroundImage: "url('/Scalable_IT_right-min_cjn5fe.png')",
           }}
@@ -58,11 +59,11 @@ export function HomeSection() {
           <p className="text-[16px] sm:text-[20px] lg:text-[22px] font-bold mb-3">
             Flexible, Scalable IT Solution
           </p>
-          <p className="text-xs sm:text-sm lg:text-[15px] leading-snug">
+          <p className="text-xs sm:text-[13px]">
             Having the right company behind your IT system is as important as
             the network itself.
           </p>
-          <p className="text-xs sm:text-sm lg:text-[15px] leading-snug">
+          <p className="text-xs sm:text-[13px]">
             Implementing a well-designed, secured enterprise network and
             utilizing the right combination of IT solutions will drive your
             business to the desired level.
@@ -74,7 +75,7 @@ export function HomeSection() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-3.5 lg:justify-between">
+      <div className="mt-5 flex flex-wrap justify-center gap-[14px] lg:flex-row lg:w-[970px] lg:justify-between mx-auto xl:w-[90%]">
         <div className="flex flex-col gap-10 text-black mt-3.5">
           <div className="flex gap-5 items-start">
             <Headphones className="w-8 h-8" />
@@ -126,16 +127,16 @@ export function HomeSection() {
           <Image
             src="/Elonatech_suupport-min_hrc21l.0c2c2ea76dfbd1cda1f3.png"
             alt="roll"
-            width={550}
+            width={500}
             height={220}
-            className="rounded-lg object-contain w-[300px] sm:w-[400px] lg:w-[350px] lg:mr-20 mt-6 2xl:w-[500px] mr-3"
+            className="rounded-lg object-contain w-[300px] sm:w-[300px] lg:w-[350px] lg:mr-20 mt-6 xl:w-[400px] mr-3"
           />
         </div>
       </div>
 
-      <div className="w-full flex flex-wrap justify-center mt-7 lg:justify-between">
-        <div>
-          <h2 className="text-[18px] text-black lg:text-[17px] 2xl:text-2xl">
+      <div className="mt-5 flex flex-wrap justify-center gap-[14px] lg:flex-row lg:w-[970px] lg:justify-between mx-auto xl:w-[90%]">
+        <div className="hidden xl:block">
+          <h2 className="text-[18px] text-black lg:text-[17px] xl:text-2xl">
             The IT Solutions and Corporate Consultant Company
           </h2>
           <div className="text-black text-xs lg:text-sm leading-7">
@@ -173,13 +174,63 @@ export function HomeSection() {
           </div>
         </div>
 
+        <div className="lg:block xl:hidden">
+          <h2 className="text-[18px] font-bold text-black lg:text-[18px] xl:text-2xl">
+            The IT Solutions and Corporate Consultant Company
+          </h2>
+          <div className="mt-2.5 text-black">
+            <p>
+              We at Elonatech are aware of your need for quality IT services.
+              Beyond 
+            </p>
+            <p>
+              doubt, the management of information technology for business is not
+            </p>
+            <p>
+              inherently a do-it-yourself-project.Business owners who aren&apos;t tech
+            </p>
+            <p>
+              -savvy need to find quality IT solution providers. We are experts in IT
+            </p>
+            <p>
+              solution providers. We are experts in IT related matters, poised to
+            </p>
+            <p>
+              shape the industry by helping clients
+              solve complex IT challenges.
+            </p>
+
+            <div>
+              <p>
+              Our company logical services are designed for the
+              top-of-the-market 
+            </p>
+            <p>
+              corporate clientele&apos; we serve as an interface keeping you above the
+            </p>
+            <p>
+              turmoil of working in
+              today&apos;s Nigeria with minimum hassle. We strive
+            </p>
+            <p>
+              to be the leading provider of innovative
+              information technologies 
+            </p>
+            <p>
+              that improve the quality of lives.
+            </p>
+            </div>
+          </div>
+
+        </div>
+
         <div>
           <Image
             src="/One_stop_IT_solution-min_lqmw0y.c47d9758ad9da1d80f35.png"
             alt="roll"
-            width={550}
+            width={500}
             height={220}
-            className="rounded-lg object-contain w-[300px] sm:w-[400px] lg:w-[350px] lg:mr-20 mt-6 2xl:w-[500px] mr-3"
+            className="rounded-lg object-contain w-[300px] sm:w-[300px] lg:w-[350px] lg:mr-20 mt-6 2xl:w-[400px] mr-3"
           />
         </div>
       </div>

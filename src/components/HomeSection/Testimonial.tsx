@@ -16,7 +16,7 @@ export function Testimonial() {
   const active = container[index];
 
   return (
-    <div className="w-[97%] sm:w-[90%] lg:w-[95%] xl:w-[1270px] mx-auto py-6">
+    <div className="w-[97%] sm:w-[90%] lg:w-[970px] xl:w-[1270px] mx-auto py-6">
       <h1 className="text-center text-white font-bold sm:text-2xl">
         Testimonial
       </h1>
