@@ -13,7 +13,7 @@ import {
 import { ShoppingCart } from "lucide-react";
 
 export function Product() {
-  const { products, isLoading } = useType();
+  const { products, isLoading, selectedProduct } = useType();
 
   if (isLoading) {
     return <p className="text-center text-gray-500">Loading...</p>;
@@ -67,7 +67,7 @@ export function Product() {
           </CardContent>
 
           <CardFooter className="p-2 flex justify-center w-[95%] h-7 text-white font-bold text-xs rounded-full bg-[#212529]">
-            <button>View more</button>
+            <button onClick={()=> selectedProduct(el)}>View more</button>
           </CardFooter>
         </Card>
       ))}

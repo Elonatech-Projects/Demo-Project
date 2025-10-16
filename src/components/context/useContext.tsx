@@ -1,20 +1,24 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode, useEffect } from "react";
-import { ProductsResponse, Product } from "@/data/element/products";
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
+import { ProductsResponse, Product } from "@/data/element/products";;
 import axios, { isAxiosError } from "axios";
 import { toast } from "react-hot-toast";
 
-// ================= CONTEXT INTERFACE =================
 interface TypeContextProps {
-  products: Product[];       // Always an array for easier rendering
+  products: Product[];
   isLoading: boolean;
+  selectedProduct: (product: Product) => void;
 }
 
-// ================= CREATE CONTEXT =================
 const TypeContext = createContext<TypeContextProps | undefined>(undefined);
 
-// ================= PROVIDER COMPONENT =================
 export function UseContextApp({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,7 +27,7 @@ export function UseContextApp({ children }: { children: ReactNode }) {
     try {
       setIsLoading(true);
       const res = await axios.get<ProductsResponse>(
-        "http://localhost:5000/api/v1/getProducts"
+        "https://product-api-q2bi.onrender.com/api/v1/getProducts"
       );
       setProducts(res.data.data || []);
       console.log("✅ Products fetched:", res.data.data);
@@ -43,14 +47,17 @@ export function UseContextApp({ children }: { children: ReactNode }) {
     getResponse();
   }, []);
 
+  const selectedProduct = (prduct: Product) => {
+    console.log("item", prduct);
+  };
+
   return (
-    <TypeContext.Provider value={{ products, isLoading}}>
+    <TypeContext.Provider value={{ products, isLoading, selectedProduct }}>
       {children}
     </TypeContext.Provider>
   );
 }
 
-// ================= CUSTOM HOOK =================
 export function useType() {
   const context = useContext(TypeContext);
   if (!context) {
