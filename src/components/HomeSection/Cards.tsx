@@ -3,12 +3,12 @@ import React from "react";
 
 export function Cards() {
   return (
-    <div className="w-[97%] sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[1270px] mx-auto mt-10">
+    <div className="w-[95%] sm:w-[90%] lg:w-[970px] xl:w-[1270px] mx-auto mt-10">
       {/* GRID CONTAINER */}
       <div
         className="
-          grid grid-cols-1 md:grid-cols-1 
-          gap-4 justify-items-center items-center lg:grid-cols-3
+          flex flex-col justify-center gap-3.5 lg:flex-row 
+          justify-items-center items-center
         "
       >
         {/* ===== CARD 1 ===== */}

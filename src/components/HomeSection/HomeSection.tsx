@@ -26,7 +26,7 @@ export function HomeSection() {
       >
         {/* ================= LEFT CARD ================= */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat text-white  h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[210px] "
+          className="relative bg-cover bg-center bg-no-repeat text-white  h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[200px] "
           style={{
             backgroundImage: "url('/Scalable_IT_left-min_c8po5r.png')",
           }}
@@ -51,7 +51,7 @@ export function HomeSection() {
 
         {/* ================= RIGHT CARD ================= */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat  text-white h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[210px] "
+          className="relative bg-cover bg-center bg-no-repeat  text-white h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[200px] "
           style={{
             backgroundImage: "url('/Scalable_IT_right-min_cjn5fe.png')",
           }}
@@ -61,11 +61,11 @@ export function HomeSection() {
           </p>
           <p className="text-xs sm:text-[13px]">
             Having the right company behind your IT system is as important as
-            the network itself.
+            the network
           </p>
           <p className="text-xs sm:text-[13px]">
             Implementing a well-designed, secured enterprise network and
-            utilizing the right combination of IT solutions will drive your
+            utilizing the right  IT solutions will drive your
             business to the desired level.
           </p>
 

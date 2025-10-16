@@ -9,6 +9,8 @@ import { WhatWeDoBest } from "@/components/Section/WhatWeDoBest";
 import { Testimonial } from "@/components/HomeSection/Testimonial";
 import { Cards } from "@/components/HomeSection/Cards";
 import { ProfileImage } from "@/components/HomeSection/ProfileImage";
+import { Product } from "@/components/HomeSection/Product";
+import { Footer } from "@/components/HomeSection/Footer";
 
 export default function Home() {
   return (
@@ -33,8 +35,12 @@ export default function Home() {
       </div>
 
       <div className="bg-[#cccccc] mt-14 px-4">
-          <ProfileImage />
+        <ProfileImage />
       </div>
+
+      <Product />
+
+      <Footer />
     </div>
   );
 }
