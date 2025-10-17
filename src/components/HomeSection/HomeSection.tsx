@@ -6,39 +6,40 @@ import { Gem, Headphones, Laptop, Printer } from "lucide-react";
 
 export function HomeSection() {
   return (
-    <div className="w-full py-3.5">
-      <h1 className="text-center text-sm text-black font-bold sm:text-2xl">
+    <div className="w-full py-3.5 ">
+      <h1 className="text-center text-sm text-black font-bold sm:text-2xl w-lg:text-3xl">
         Why Elonatech
       </h1>
-      <div className="bg-[#dc3545] w-[60px] h-[2px] mx-auto"></div>
-      <p className="text-black text-center mt-2.5 text-sm lg:text-2xl">
+      <div className="mt-3  w-[100px] h-[2px] mx-auto bg-[#dc3545]"></div>
+      <p className="text-black text-center text-[17px] mt-2.5 text-sm lg:text-2xl">
         Top-Notch Technology Service Provider.
       </p>
       <div
         className="
           flex flex-col gap-[14px] 
-          lg:flex-row lg:w-[970px] justify-between 
+          md:w-full
+          lg:flex-row lg:w-[990px] justify-between 
           items-center lg:items-start
           mx-auto
-          xl:w-[90%]
+          xl:w-[95%]
           mt-2.5
         "
       >
         {/* ================= LEFT CARD ================= */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat text-white  h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[200px] "
+          className="w-full h-[250px] relative bg-cover bg-center bg-no-repeat text-white p-5 rounded-md md:w-[97%] lg:h-[260px] xl:h-[200px] xl:w-[70%]"
           style={{
             backgroundImage: "url('/Scalable_IT_left-min_c8po5r.png')",
           }}
         >
-          <p className="text-[16px] sm:text-[20px] font-bold mb-3">
+          <h1 className="text-[16px] font-bold sm:text-[20px] ">
             Website and App Solutions
-          </p>
-          <p className="text-xs sm:text-[13px]">
+          </h1>
+          <p className="text-xs leading-6 sm:text-[13px] lg:text-[15px]">
             At Elonatech, we build Apps that are not only visually beautiful but
             also functionally.
           </p>
-          <p className="text-xs sm:text-[13px]">
+          <p className="text-xs leading-6 sm:text-[13px] lg:text-[15px]">
             Our team of web strategists, designers, developers, and project
             managers work together to help clients meet their business
             objectives.
@@ -51,22 +52,22 @@ export function HomeSection() {
 
         {/* ================= RIGHT CARD ================= */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat  text-white h-[230px] p-5 rounded-md lg:h-[260px] xl:h-[200px] "
+          className="w-full h-[250px] relative bg-cover bg-center bg-no-repeat  text-white p-5 rounded-md md:w-[97%] lg:h-[260px] xl:h-[200px] xl:w-[70%]"
           style={{
             backgroundImage: "url('/Scalable_IT_right-min_cjn5fe.png')",
           }}
         >
-          <p className="text-[16px] sm:text-[20px] lg:text-[22px] font-bold mb-3">
+          <h1 className="text-[16px] sm:text-[20px] lg:text-[22px] font-bold ">
             Flexible, Scalable IT Solution
-          </p>
-          <p className="text-xs sm:text-[13px]">
+          </h1>
+          <p className="text-xs leading-6 sm:text-[13px] lg:text-[15px]">
             Having the right company behind your IT system is as important as
             the network
           </p>
-          <p className="text-xs sm:text-[13px]">
+          <p className="text-xs leading-6 sm:text-[13px] lg:text-[15px]">
             Implementing a well-designed, secured enterprise network and
-            utilizing the right  IT solutions will drive your
-            business to the desired level.
+            utilizing the right IT solutions will drive your business to the
+            desired level.
           </p>
 
           <button className="p-2.5 bg-[#dc3545] mt-4 rounded w-fit text-sm lg:text-base">
@@ -75,12 +76,15 @@ export function HomeSection() {
         </div>
       </div>
 
-      <div className="mt-5 flex flex-wrap justify-center gap-[14px] lg:flex-row lg:w-[970px] lg:justify-between mx-auto xl:w-[90%]">
+      <div className="mt-5 flex flex-wrap justify-center gap-[14px] lg:flex-row lg:w-[990px] lg:justify-between mx-auto xl:w-[95%]">
         <div className="flex flex-col gap-10 text-black mt-3.5">
           <div className="flex gap-5 items-start">
             <Headphones className="w-8 h-8" />
             <div>
-              <Link className="text-black text-xs" href="">
+              <Link
+                className="text-[#34548c] text-sm underline underline-offset-2"
+                href=""
+              >
                 Online Support And Installations
               </Link>
               <p className="text-black font-bold text-sm">
@@ -91,7 +95,10 @@ export function HomeSection() {
           <div className="flex gap-5 items-start">
             <Laptop className="w-8 h-8" />
             <div>
-              <Link className="text-blue-600 text-xs" href="">
+              <Link
+                className="text-[#34548c] text-sm underline underline-offset-2"
+                href=""
+              >
                 IT Infrastructure &amp; Solutions
               </Link>
 
@@ -103,7 +110,10 @@ export function HomeSection() {
           <div className="flex gap-5 items-start">
             <Gem className="w-8 h-8" />
             <div>
-              <Link className="text-blue-600 text-xs" href="">
+              <Link
+                className="text-[#34548c] text-sm underline underline-offset-2"
+                href=""
+              >
                 Quality &amp; Innovation
               </Link>
               <p className="text-black font-bold text-sm">
@@ -114,7 +124,10 @@ export function HomeSection() {
           <div className="flex gap-5 items-start">
             <Printer className="w-8 h-8" />
             <div>
-              <Link className="text-blue-600 text-xs" href="">
+              <Link
+                className="text-[#34548c] text-sm underline underline-offset-2"
+                href=""
+              >
                 Hardware &amp; Devices
               </Link>
               <p className="text-black font-bold text-sm">
@@ -129,14 +142,14 @@ export function HomeSection() {
             alt="roll"
             width={500}
             height={220}
-            className="rounded-lg object-contain w-[300px] sm:w-[300px] lg:w-[350px] lg:mr-20 mt-6 xl:w-[400px] mr-3"
+            className="rounded-lg object-contain w-[300px] lg:w-[300px] lg:mr-20 mt-6 xl:w-[450px] mr-0"
           />
         </div>
       </div>
 
-      <div className="mt-5 flex flex-wrap justify-center gap-[14px] lg:flex-row lg:w-[970px] lg:justify-between mx-auto xl:w-[90%]">
-        <div className="hidden xl:block">
-          <h2 className="text-[18px] text-black lg:text-[17px] xl:text-2xl">
+      <div className="flex flex-wrap justify-center gap-[14px] lg:flex lg:w-[990px] lg:justify-between mx-auto xl:w-[95%] xl:flex">
+        <div className="hidden md:block mt-4">
+          <h2 className="text-[18px] font-bold text-black lg:text-[17px] xl:text-2xl">
             The IT Solutions and Corporate Consultant Company
           </h2>
           <div className="text-black text-xs lg:text-sm leading-7">
@@ -174,54 +187,19 @@ export function HomeSection() {
           </div>
         </div>
 
-        <div className="lg:block xl:hidden">
+        <div className="block mt-3.5 md:hidden">
           <h2 className="text-[18px] font-bold text-black lg:text-[18px] xl:text-2xl">
             The IT Solutions and Corporate Consultant Company
           </h2>
           <div className="mt-2.5 text-black">
-            <p>
-              We at Elonatech are aware of your need for quality IT services.
-              Beyond 
-            </p>
-            <p>
-              doubt, the management of information technology for business is not
-            </p>
-            <p>
-              inherently a do-it-yourself-project.Business owners who aren&apos;t tech
-            </p>
-            <p>
-              -savvy need to find quality IT solution providers. We are experts in IT
-            </p>
-            <p>
-              solution providers. We are experts in IT related matters, poised to
-            </p>
-            <p>
-              shape the industry by helping clients
-              solve complex IT challenges.
-            </p>
-
-            <div>
-              <p>
-              Our company logical services are designed for the
-              top-of-the-market 
-            </p>
-            <p>
-              corporate clientele&apos; we serve as an interface keeping you above the
-            </p>
-            <p>
-              turmoil of working in
-              today&apos;s Nigeria with minimum hassle. We strive
-            </p>
-            <p>
-              to be the leading provider of innovative
-              information technologies 
-            </p>
-            <p>
-              that improve the quality of lives.
-            </p>
-            </div>
+            <p>We at Elonatech are aware of your need for quality</p>
+            <p>IT services.Beyond doubt, the management of infor-</p>
+            <p>mation technology for business is not inherently do-</p>
+            <p>-it-yourself-project.Business owners who aren&apos;t tech</p>
+            <p>-savvy need to find quality IT solution providers. We</p>
+            <p>are experts in IT related matters, poised to shape in-</p>
+            <p>dustry by helping clients solve complex IT challenges.</p>
           </div>
-
         </div>
 
         <div>
@@ -230,7 +208,7 @@ export function HomeSection() {
             alt="roll"
             width={500}
             height={220}
-            className="rounded-lg object-contain w-[300px] sm:w-[300px] lg:w-[350px] lg:mr-20 mt-6 2xl:w-[400px] mr-3"
+            className="rounded-lg object-contain w-[300px] lg:w-[270px] lg:mr-20 mt-6 xl:w-[420px]"
           />
         </div>
       </div>

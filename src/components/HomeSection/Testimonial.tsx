@@ -16,7 +16,7 @@ export function Testimonial() {
   const active = container[index];
 
   return (
-    <div className="w-[97%] sm:w-[90%] lg:w-[970px] xl:w-[1270px] mx-auto py-6">
+    <div className="w-[97%] sm:w-[90%] lg:w-[990px] xl:w-[1290px] mx-auto py-6">
       <h1 className="text-center text-white font-bold sm:text-2xl">
         Testimonial
       </h1>
@@ -63,7 +63,7 @@ export function Testimonial() {
         {container.map((_, i) => (
           <div
             key={i}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
               i === index ? "bg-[#dc3545] scale-125" : "bg-gray-500"
             }`}
           ></div>

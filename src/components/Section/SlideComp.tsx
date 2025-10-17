@@ -83,10 +83,11 @@ export function SlideComp() {
   };
 
   return (
-    <div className="relative w-full m-auto overflow-hidden rounded-lg mt-24 lg:w-[970px] xl:w-[90%]">
+    <div className="relative w-full m-auto overflow-hidden rounded-lg mt-24 lg:w-[990px] xl:w-[95%]">
       <h1 className="text-center text-black text-2xl font-bold lg:text-3xl">
         Some of our clients
       </h1>
+      <div className="mt-2.5 w-[100px] h-[2px] mx-auto bg-[#dc3545]"></div>
       <div
         ref={containerRef}
         className="flex mt-7"

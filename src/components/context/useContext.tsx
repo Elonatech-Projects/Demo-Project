@@ -7,14 +7,16 @@ import {
   ReactNode,
   useEffect,
 } from "react";
-import { ProductsResponse, Product } from "@/data/element/products";;
+import { ProductsResponse, Product } from "@/data/element/products";
 import axios, { isAxiosError } from "axios";
 import { toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 interface TypeContextProps {
   products: Product[];
   isLoading: boolean;
   selectedProduct: (product: Product) => void;
+  item: Product | null;
 }
 
 const TypeContext = createContext<TypeContextProps | undefined>(undefined);
@@ -22,6 +24,8 @@ const TypeContext = createContext<TypeContextProps | undefined>(undefined);
 export function UseContextApp({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [item, setItem] = useState<Product | null>(null);
+  const useNavigate = useRouter();
 
   const getResponse = async () => {
     try {
@@ -47,12 +51,18 @@ export function UseContextApp({ children }: { children: ReactNode }) {
     getResponse();
   }, []);
 
-  const selectedProduct = (prduct: Product) => {
-    console.log("item", prduct);
+  const selectedProduct = (product: Product) => {
+    if (!product) {
+      toast.error("No product found");
+    }
+    setItem(product);
+    useNavigate.push('/product');
   };
 
   return (
-    <TypeContext.Provider value={{ products, isLoading, selectedProduct }}>
+    <TypeContext.Provider
+      value={{ products, isLoading, selectedProduct, item }}
+    >
       {children}
     </TypeContext.Provider>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ProfileImage() {
   return (
-   <div className="text-black min-h-[255px] pt-6 overflow-hidden relative mt-3.5 w-[95%] sm:w-[90%] lg:w-[970px] xl:w-[1270px] mx-auto">
+   <div className="px-0  text-black min-h-[255px] pt-6 overflow-hidden relative mt-3.5 w-[95%]  sm:w-[90%] lg:w-[970px] lg:px-9 xl:w-[1270px] mx-auto">
       {/* Container */}
      <div className="w-[97%] sm:w-[90%] md:w-[80%] lg:w-[95%] xl:w-[1270px]">
         {/* Text Section */}

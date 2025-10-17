@@ -12,7 +12,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { items } from "@/data/drop-down/mobile";
 
-export function DesktopHeader() {
+export function DesktopProductNav() {
   const [hovered, setHovered] = useState<string | null>("tech");
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -133,11 +133,15 @@ export function DesktopHeader() {
             </div>
 
             <ul className="absolute z-40 left-0 top-full mt-2 text-black bg-white shadow-lg rounded-md p-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 text-sm space-y-2">
-              <li className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">Consulting</li>
+              <li className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">
+                Consulting
+              </li>
               <li className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">
                 Retainership
               </li>
-              <li className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">Training</li>
+              <li className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">
+                Training
+              </li>
             </ul>
           </li>
 
@@ -156,7 +160,10 @@ export function DesktopHeader() {
                 "POS Systems",
                 "Network Devices",
               ].map((item) => (
-                <li key={item} className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">
+                <li
+                  key={item}
+                  className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white"
+                >
                   {item}
                 </li>
               ))}
@@ -172,7 +179,10 @@ export function DesktopHeader() {
             <ul className="absolute z-40 left-0 top-full mt-2 text-black bg-white shadow-lg rounded-md p-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 text-sm space-y-2">
               {["Company", "Team", "Portfolio", "Blog", "Career"].map(
                 (item) => (
-                  <li key={item} className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white">
+                  <li
+                    key={item}
+                    className="p-1 rounded-full cursor-pointer hover:bg-[#dc3545] hover:text-white"
+                  >
                     {item}
                   </li>
                 )

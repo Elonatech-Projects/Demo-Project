@@ -3,15 +3,13 @@ import React from "react";
 
 export function Cards() {
   return (
-    <div className="w-[95%] sm:w-[90%] lg:w-[970px] xl:w-[1270px] mx-auto mt-10">
-      {/* GRID CONTAINER */}
+    <div className="w-[95%] sm:w-[90%] lg:w-[990px] xl:w-[1290px] mx-auto mt-10">
       <div
         className="
           flex flex-col justify-center gap-3.5 lg:flex-row 
           justify-items-center items-center
         "
       >
-        {/* ===== CARD 1 ===== */}
         <div
           className="
             relative text-xs sm:text-sm 
@@ -31,7 +29,6 @@ export function Cards() {
           </div>
         </div>
 
-        {/* ===== CARD 2 ===== */}
         <div
           className="
             relative text-xs sm:text-sm 
@@ -51,7 +48,6 @@ export function Cards() {
           </div>
         </div>
 
-        {/* ===== CARD 3 ===== */}
         <div
           className="
             relative text-xs sm:text-sm 

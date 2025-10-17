@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export function MobileHeader() {
+export function MobileProductNav() {
   const [mobile, setMobile] = useState(false);
   const [solution, setSolution] = useState(false);
   const [support, setSupport] = useState(false);
@@ -91,14 +91,14 @@ export function MobileHeader() {
               >
                 <span className="text-lg hover:text-[#dc3545]">Solutions</span>
                 <SquareChevronDown
-                  className={`w-2 h-2 transition-transform ${
+                  className={`w-3 h-3 transition-transform ${
                     solution ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {solution && (
-                <div className="absolute w-full z-30 mt-2 space-y-4">
+                <div className="w-full absolute z-30 mt-2 space-y-4">
                   {items.map((section) => (
                     <div
                       key={section.key}
@@ -132,14 +132,14 @@ export function MobileHeader() {
               >
                 <span className="text-lg hover:text-[#dc3545]">Support</span>
                 <SquareChevronDown
-                  className={`w-2 h-2 transition-transform ${
+                  className={`w-3 h-3 transition-transform ${
                     support ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {support && (
-                <ul className="absolute w-full z-30 mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
+                <ul className="mt-3 absolute w-full space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {["Technical", "Network", "Remote"].map((label) => (
                     <li
                       key={label}
@@ -153,22 +153,22 @@ export function MobileHeader() {
             </div>
 
             {/* services */}
-            <div className="w-full relative border-b border-gray-600 py-3">
+            <div className="relative border-b border-gray-600 py-3">
               <button
                 onClick={() => setService(!service)}
-                className=" flex gap-1 items-center"
+                className="w-full flex gap-1 items-center"
               >
                 <span className="text-lg hover:text-[#dc3545]">
                   Strategic Services
                 </span>
                 <SquareChevronDown
-                  className={`w-2 h-2 transition-transform ${
+                  className={`w-3 h-3 transition-transform ${
                     service ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {service && (
-                <ul className="absolute w-full z-30 mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
+                <ul className="mt-3 absolute w-full z-30 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {["Consulting", "Retainership", "Training"].map((label) => (
                     <li
                       key={label}
@@ -189,13 +189,13 @@ export function MobileHeader() {
               >
                 <span className="text-lg hover:text-[#dc3545]">Products</span>
                 <SquareChevronDown
-                  className={`w-2 h-2 transition-transform ${
+                  className={`w-3 h-3 transition-transform ${
                     product ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {product && (
-                <ul className="w-full absolute z-30 mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
+                <ul className="mt-3 absolute w-full z-30 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {[
                     "Shop",
                     "Computers",
@@ -223,13 +223,13 @@ export function MobileHeader() {
               >
                 <span className="text-lg hover:text-[#dc3545]">Who we are</span>
                 <SquareChevronDown
-                  className={`w-2 h-2 transition-transform ${
+                  className={`w-3 h-3 transition-transform ${
                     weAre ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {weAre && (
-                <ul className="w-full absolute z-30 mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
+                <ul className="absolute w-full z-30 mt-3 space-y-2 bg-gray-100 text-black rounded-md p-3 flex flex-col items-center">
                   {["Company", "Team", "Portfolio", "Blog", "Career"].map(
                     (label) => (
                       <li
@@ -249,7 +249,7 @@ export function MobileHeader() {
             </div>
 
             {/* Socials */}
-            <div className="flex justify-center gap-4 mt-6 pb-10">
+            <div className="flex justify-center gap-4 mt-10 pb-10">
               <Linkedin className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
               <Facebook className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
               <Instagram className="w-5 h-5 hover:text-blue-400 cursor-pointer" />

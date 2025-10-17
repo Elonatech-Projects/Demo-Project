@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <div className="bg-[#11253d] pb-20 mt-5">
+    <div className="bg-[#11253d] pb-24 mt-5">
       <div className="grid grid-cols-2 gap-8 ml-5 sm:grid-cols-3 xl:flex xl:justify-center xl:gap-16">
         <div className="text-white text-sm leading-10 mt-14">
           <Image
@@ -109,11 +109,15 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-3.5 mt-8">
-            <input className="border rounded-2xl text-white pl-3.5 h-10" type="text" placeholder="Your email*" />
+            <input
+              className="border rounded-2xl text-white pl-3.5 h-10"
+              type="text"
+              placeholder="Your email*"
+            />
             <button className="bg-[#dc3545] rounded-2xl h-10">Subscribe</button>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-4 text-white text-xs flex gap-1">
             <input type="checkbox" name="" id="" />
             <span>I accept the</span>
             <span className="underline underline-offset-2 text-blue-600 hover:text-blue-800 cursor-pointer">
@@ -122,8 +126,10 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap gap-1.5 text-sm mt-8 lg:flex lg:justify-center">
-        <span className="text-white">Copyright © 2025 All rights reserved | Designed & Developed by </span>
+      <div className="ml-5 flex flex-wrap gap-1.5 text-sm mt-8 lg:flex lg:justify-center">
+        <span className="text-white">
+          Copyright © 2025 All rights reserved | Designed & Developed by{" "}
+        </span>
         <span className="text-[#dc3545]">Elonatech Nigeria Limited</span>
       </div>
     </div>

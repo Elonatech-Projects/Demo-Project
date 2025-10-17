@@ -1,12 +1,9 @@
-// ==================== PRODUCT TYPES ====================
 
-// Individual star rating
 export interface Star {
   _id: string;
   stars: string; // e.g. "⭐"
 }
 
-// The new product object
 export interface NewProduct {
   _id: string;
   productImage: string;
@@ -15,14 +12,12 @@ export interface NewProduct {
   price: number;
 }
 
-// Combines product and its stars
 export interface FirstProduct {
   _id: string;
   newProduct: NewProduct;
   starImg: Star[];
 }
 
-// Images array (each product has one element in this array)
 export interface ArrayImage {
   _id: string;
   imageOne: string;
@@ -30,7 +25,6 @@ export interface ArrayImage {
   imageThree: string;
 }
 
-// ProductData array (contains brand, stock, etc.)
 export interface ProductData {
   _id: string;
   nameOne: string;
@@ -41,7 +35,6 @@ export interface ProductData {
   shipping: string;
 }
 
-// Product details object
 export interface ProductDetails {
   _id: string;
   inch: string;
@@ -58,7 +51,6 @@ export interface ProductDetails {
   statementOne: string;
 }
 
-// The main Product document from MongoDB
 export interface Product {
   _id: string;
   firstProduct: FirstProduct;
@@ -67,8 +59,6 @@ export interface Product {
   details: ProductDetails;
   __v: number;
 }
-
-// ==================== RESPONSE TYPES ====================
 
 // Response shape from backend
 export interface ProductsResponse {

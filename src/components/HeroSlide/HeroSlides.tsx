@@ -31,7 +31,7 @@ export function HeroSlides() {
         <div className="text-white w-full">
           {images[count].words.map((el, i) => (
             <div key={i}>
-              <h1 className="text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold leading-snug">
+              <h1 className="text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold">
                 {el.textOne}
               </h1>
 
@@ -59,7 +59,7 @@ export function HeroSlides() {
         {images.map((_, i) => (
           <div
             key={i}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
               i === count ? "bg-[#dc3545] scale-125" : "bg-gray-500"
             }`}
           ></div>
