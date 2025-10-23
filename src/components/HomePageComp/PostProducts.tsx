@@ -5,8 +5,10 @@ import type React from "react";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import axios from "axios";
+import axios, { isAxiosError } from "axios";
 import { ChevronDown, ChevronUp, Upload, ImageIcon, X } from "lucide-react";
+import toast from "react-hot-toast";
+import Image from "next/image";
 
 export const PostProducts = () => {
   const [name, setName] = useState("");
@@ -21,7 +23,11 @@ export const PostProducts = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // 🧩 Computer specs
-  const [specs, setSpecs] = useState({
+  type SpecsType = {
+    [key: string]: string;
+  };
+
+  const [specs, setSpecs] = useState<SpecsType>({
     series: "",
     model: "",
     weight: "",
@@ -113,26 +119,36 @@ export const PostProducts = () => {
       formData.append("odd", odd);
       formData.append("quantity", quantity);
       formData.append("category", category);
-      formData.append("computerProperty", JSON.stringify(specs)); // ✅ backend expects one object, not array
 
-      // append images
+      // ✅ IMPORTANT: backend expects an array of computerProperty objects
+      formData.append("computerProperty", JSON.stringify(specs));
+
+      // ✅ Append all image files (as File objects)
       images.forEach((image, index) => {
         const blob = dataURLtoFile(image, `image_${index}.jpg`);
         formData.append("images", blob);
       });
 
-      // ✅ correct API endpoint (your backend)
+      // 🧩 Debug log to verify keys
+      console.log("FormData keys:", Array.from(formData.keys()));
+      for (const [key, value] of formData.entries()) {
+        if (value instanceof File) {
+          console.log(`${key}: File ->`, value.name, value.size, value.type);
+        } else {
+          console.log(`${key}:`, value);
+        }
+      }
+
+      // ✅ Send request
       const response = await axios.post(
         "http://localhost:5000/api/v2/post",
-        formData,
+        formData
       );
 
       console.log("✅ Product created:", response.data);
-      console.log(response, 'response');
-      
-      alert("Product created successfully!");
+      toast.success("Product created successfully!");
 
-      // reset form and navigate
+      // ✅ Reset form
       setImages([]);
       setName("");
       setDescription("");
@@ -163,10 +179,14 @@ export const PostProducts = () => {
         wireless: "",
       });
 
-      router.push("/ ");
-    } catch (error: any) {
+      router.push("/");
+    } catch (error) {
       console.error("❌ Error uploading:", error);
-      alert(error.response?.data?.message || "❌ Upload failed");
+      let err = "An error occurred";
+      if (isAxiosError(error)) {
+        err = error.response?.data?.message || err;
+      }
+      toast.error(err);
     } finally {
       setIsSubmitting(false);
     }
@@ -259,7 +279,7 @@ export const PostProducts = () => {
               </div>
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Discount (%)
+                  Odd (%)
                 </label>
                 <input
                   type="text"
@@ -337,9 +357,12 @@ export const PostProducts = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                   {images.map((img, i) => (
                     <div key={i} className="relative group">
-                      <img
-                        src={img || "/placeholder.svg"}
+                      <Image
+                        src={img}
                         alt={`preview-${i}`}
+                        unoptimized
+                        width={200}
+                        height={200}
                         className="w-full h-24 object-cover rounded-lg border border-slate-200"
                       />
                       <button
@@ -384,7 +407,7 @@ export const PostProducts = () => {
                     <input
                       type="text"
                       name={key}
-                      value={(specs as any)[key]}
+                      value={specs[key]}
                       onChange={handleSpecsChange}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     />

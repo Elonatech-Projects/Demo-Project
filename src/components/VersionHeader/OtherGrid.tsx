@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 
 export function OtherGrid() {
-  const [popImg, setPopImg] = useState(false);
   const [item, setItem] = useState(false);
   const [itemOne, setItemOne] = useState(false);
   return (

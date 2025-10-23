@@ -6,7 +6,7 @@ import { useState } from "react";
 export function DisplayTwo() {
   const [popImg, setPopImg] = useState(false);
   const [item, setItem] = useState(false);
-  const [itemOne, setItemOne] = useState(false);
+  
   return (
     <div className="m-auto grid md:grid-cols-2 gap-4 lg:w-[990px] lg:grid-cols-3 xl:w-[95%] xl:grid-cols-3">
       {/* ================= ITEM ONE ================= */}

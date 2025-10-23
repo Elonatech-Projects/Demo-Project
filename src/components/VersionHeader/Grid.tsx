@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 export function Grid() {
-  const [popImg, setPopImg] = useState(false);
   const [item, setItem] = useState(false);
   return (
     <div className="grid grid-cols-1 mt-3.5">

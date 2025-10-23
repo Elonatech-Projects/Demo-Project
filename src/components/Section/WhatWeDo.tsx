@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { GridTwo } from "../VersionHeader/GridTwo";
 import { GridThree } from "../VersionHeader/GridThree";
-import { Grid } from "../VersionHeader/Grid";
 
 export function WhatWeDo() {
   const [popImg, setPopImg] = useState(false);
