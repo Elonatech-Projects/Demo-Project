@@ -31,7 +31,7 @@ export function UseContextApp({ children }: { children: ReactNode }) {
     try {
       setIsLoading(true);
       const res = await axios.get<ProductsResponse>(
-        "https://product-api-q2bi.onrender.com/api/v1/getProducts"
+        "https://product-api-ru3f.onrender.com/api/v1/getProducts"
       );
       setProducts(res.data.data || []);
       console.log("✅ Products fetched:", res.data.data);

@@ -10,7 +10,7 @@ import { ChevronDown, ChevronUp, Upload, ImageIcon, X } from "lucide-react";
 import toast from "react-hot-toast";
 import Image from "next/image";
 
-export const PostProducts = () => {
+export const ItemTwo = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -19,7 +19,7 @@ export const PostProducts = () => {
   const [quantity, setQuantity] = useState("");
   const [category, setCategory] = useState("Computer");
   const [images, setImages] = useState<string[]>([]);
-  const [showSpecs, setShowSpecs] = useState(false);
+  // const [showSpecs, setShowSpecs] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // 🧩 Computer specs
@@ -27,27 +27,27 @@ export const PostProducts = () => {
     [key: string]: string;
   };
 
-  const [specs, setSpecs] = useState<SpecsType>({
-    series: "",
-    model: "",
-    weight: "",
-    dimension: "",
-    item: "",
-    color: "",
-    hardware: "",
-    os: "",
-    processor: "",
-    number: "",
-    memory: "",
-    ram: "",
-    drive: "",
-    display: "",
-    resolution: "",
-    graphics: "",
-    voltage: "",
-    battery: "",
-    wireless: "",
-  });
+  // const [specs, setSpecs] = useState<SpecsType>({
+  //   series: "",
+  //   model: "",
+  //   weight: "",
+  //   dimension: "",
+  //   item: "",
+  //   color: "",
+  //   hardware: "",
+  //   os: "",
+  //   processor: "",
+  //   number: "",
+  //   memory: "",
+  //   ram: "",
+  //   drive: "",
+  //   display: "",
+  //   resolution: "",
+  //   graphics: "",
+  //   voltage: "",
+  //   battery: "",
+  //   wireless: "",
+  // });
 
   const router = useRouter();
 
@@ -67,10 +67,10 @@ export const PostProducts = () => {
     };
 
   // 🔹 Handle specs change
-  const handleSpecsChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setSpecs((prev) => ({ ...prev, [name]: value }));
-  };
+  // const handleSpecsChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = e.target;
+  //   setSpecs((prev) => ({ ...prev, [name]: value }));
+  // };
 
   // 🔹 Handle images
   const handleImage = (e: ChangeEvent<HTMLInputElement>) => {
@@ -121,7 +121,7 @@ export const PostProducts = () => {
       formData.append("category", category);
 
       // ✅ IMPORTANT: backend expects an array of computerProperty objects
-      formData.append("computerProperty", JSON.stringify(specs));
+      // formData.append("computerProperty", JSON.stringify(specs));
 
       // ✅ Append all image files (as File objects)
       images.forEach((image, index) => {
@@ -157,27 +157,27 @@ export const PostProducts = () => {
       setOdd("");
       setQuantity("");
       setCategory("Computer");
-      setSpecs({
-        series: "",
-        model: "",
-        weight: "",
-        dimension: "",
-        item: "",
-        color: "",
-        hardware: "",
-        os: "",
-        processor: "",
-        number: "",
-        memory: "",
-        ram: "",
-        drive: "",
-        display: "",
-        resolution: "",
-        graphics: "",
-        voltage: "",
-        battery: "",
-        wireless: "",
-      });
+      // setSpecs({
+      //   series: "",
+      //   model: "",
+      //   weight: "",
+      //   dimension: "",
+      //   item: "",
+      //   color: "",
+      //   hardware: "",
+      //   os: "",
+      //   processor: "",
+      //   number: "",
+      //   memory: "",
+      //   ram: "",
+      //   drive: "",
+      //   display: "",
+      //   resolution: "",
+      //   graphics: "",
+      //   voltage: "",
+      //   battery: "",
+      //   wireless: "",
+      // });
 
       router.push("/");
     } catch (error) {
@@ -380,7 +380,7 @@ export const PostProducts = () => {
           </div>
 
           {/* Specifications Section */}
-          <div className="p-8 border-b border-slate-200">
+          {/* <div className="p-8 border-b border-slate-200">
             <button
               type="button"
               onClick={() => setShowSpecs(!showSpecs)}
@@ -415,7 +415,7 @@ export const PostProducts = () => {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* Description Section */}
           <div className="p-8 border-b border-slate-200">
