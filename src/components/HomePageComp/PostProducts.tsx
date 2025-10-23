@@ -144,10 +144,10 @@ export const PostProducts = () => {
         "https://product-api-q2bi.onrender.com/api/v2/post",
         formData
       );
-
       console.log("✅ Product created:", response.data);
       toast.success("Product created successfully!");
-
+      // http://localhost:5000/api/v2/post
+      // https://product-api-q2bi.onrender.com/api/v2/post
       // ✅ Reset form
       setImages([]);
       setName("");
