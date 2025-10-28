@@ -27,28 +27,6 @@ export const ItemTwo = () => {
     [key: string]: string;
   };
 
-  // const [specs, setSpecs] = useState<SpecsType>({
-  //   series: "",
-  //   model: "",
-  //   weight: "",
-  //   dimension: "",
-  //   item: "",
-  //   color: "",
-  //   hardware: "",
-  //   os: "",
-  //   processor: "",
-  //   number: "",
-  //   memory: "",
-  //   ram: "",
-  //   drive: "",
-  //   display: "",
-  //   resolution: "",
-  //   graphics: "",
-  //   voltage: "",
-  //   battery: "",
-  //   wireless: "",
-  // });
-
   const router = useRouter();
 
   // 🔹 Handle number-only fields
@@ -66,13 +44,6 @@ export const ItemTwo = () => {
       setter(e.target.value);
     };
 
-  // 🔹 Handle specs change
-  // const handleSpecsChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   const { name, value } = e.target;
-  //   setSpecs((prev) => ({ ...prev, [name]: value }));
-  // };
-
-  // 🔹 Handle images
   const handleImage = (e: ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) return;
@@ -146,8 +117,6 @@ export const ItemTwo = () => {
       );
       console.log("✅ Product created:", response.data);
       toast.success("Product created successfully!");
-      // http://localhost:5000/api/v2/post
-      // https://product-api-q2bi.onrender.com/api/v2/post
       // ✅ Reset form
       setImages([]);
       setName("");
@@ -157,27 +126,6 @@ export const ItemTwo = () => {
       setOdd("");
       setQuantity("");
       setCategory("Computer");
-      // setSpecs({
-      //   series: "",
-      //   model: "",
-      //   weight: "",
-      //   dimension: "",
-      //   item: "",
-      //   color: "",
-      //   hardware: "",
-      //   os: "",
-      //   processor: "",
-      //   number: "",
-      //   memory: "",
-      //   ram: "",
-      //   drive: "",
-      //   display: "",
-      //   resolution: "",
-      //   graphics: "",
-      //   voltage: "",
-      //   battery: "",
-      //   wireless: "",
-      // });
 
       router.push("/");
     } catch (error) {

@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
       <HeroSlides />
 
-      <div className=" pt-12 w-[95%] md:w-[768px] lg:w-[1024px] xl:w-[1290px] mx-auto">
+      <div className=" m-auto pt-12 w-[95%] md:w-[768px] lg:w-[1000px] xl:w-[1270px]">
         <HomeSection />
         <WhatWeDoBest />
         <WhatWeDo />

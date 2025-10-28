@@ -8,7 +8,7 @@ export function GridThree() {
   const [item, setItem] = useState(false);
   const [itemOne, setItemOne] = useState(false);
   return (
-    <div className="m-auto grid md:grid-cols-2 gap-4 lg:w-[990px] lg:grid-cols-3 xl:w-[95%] xl:grid-cols-3  ">
+    <div className="m-auto grid md:grid-cols-2 gap-4 lg:w-[930px] lg:grid-cols-3 xl:w-full xl:grid-cols-3  ">
       {/* ITEM ONE */}
       <div
         onMouseEnter={() => setPopImg(true)}
@@ -35,7 +35,7 @@ export function GridThree() {
         </div>
 
         {popImg && (
-          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300">
+          <div className="absolute inset-0 z-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300">
             <h1 className="text-lg font-semibold mb-2">NETWORK ENGINEERING/</h1>
             <h1 className="text-lg font-semibold">ADMINISTRATION</h1>
 
@@ -91,7 +91,7 @@ export function GridThree() {
         </div>
 
         {item && (
-          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300">
+          <div className="absolute inset-0 z-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300">
             <h1 className="text-lg font-semibold mb-2">COMPUTER ENGINEERING</h1>
 
             <div className="mb-3">
@@ -142,7 +142,7 @@ export function GridThree() {
         </div>
 
         {itemOne && (
-          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 px-2.5">
+          <div className="absolute inset-0 z-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 px-2.5">
             <h1 className="text-lg font-semibold mb-1">ACCESS CONTROL &</h1>
             <h1 className="text-lg font-semibold mb-3">SURVEILLANCE</h1>
 

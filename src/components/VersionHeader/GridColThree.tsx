@@ -8,7 +8,7 @@ export function GridColThree() {
   const [item, setItem] = useState(false);
   const [itemOne, setItemOne] = useState(false);
   return (
-    <div className="m-auto grid md:grid-cols-2 gap-4 lg:w-[990px] lg:grid-cols-3 xl:w-[95%] xl:grid-cols-3">
+    <div className="m-auto grid md:grid-cols-2 gap-4 lg:w-[930px] lg:grid-cols-3 xl:w-full xl:grid-cols-3">
       {/* ITEM ONE */}
       <div
         onMouseEnter={() => setPopImg(true)}
@@ -40,7 +40,7 @@ export function GridColThree() {
         </div>
 
         {popImg && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 text-xs px-2.5">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-0 text-xs px-2.5">
             <h1 className="text-[15px] font-semibold mb-2 text-center">
               WEB DESIGN & DEVELOPMENT
             </h1>
@@ -103,7 +103,7 @@ export function GridColThree() {
         </div>
 
         {item && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 px-2.5">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-0 px-2.5">
             <h1 className="text-lg font-semibold mb-2">DIGITAL MARKETING</h1>
 
             <div className="mb-3">
@@ -155,7 +155,7 @@ export function GridColThree() {
         </div>
 
         {itemOne && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-30 px-2.5">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#295a9a]/90 text-white transition-all duration-300 z-0 px-2.5">
             <h1 className="text-lg font-semibold mb-2">GRAPHIC & BRANDING</h1>
 
             <div className="mb-3">

@@ -22,7 +22,7 @@ export function HeroSlides() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-full flex justify-between items-center h-[36vh] sm:h-[350px] text-white text-xs lg:h-[50vh] pt-10 xl:h-[610px]"
+      className="relative w-full flex justify-between items-center h-[52vh] sm:min-h-[200px] text-white text-xs lg:h-[50vh] pt-10 xl:h-[630px]"
     >
       {/* Left group: chevron + text */}
       <div className="flex items-center  w-full">
